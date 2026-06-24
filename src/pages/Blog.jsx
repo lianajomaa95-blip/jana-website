@@ -64,9 +64,9 @@ function Blog() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-[7px] w-[7px] bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-white">BLOG &amp; INSIGHTS</span>
+            <span className="text-xs tracking-[0.2em] text-baby">BLOG &amp; INSIGHTS</span>
           </div>
-          <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">Content that Matters</h1>
+          <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">Content that Matters!</h1>
           <p className="mt-5 max-w-2xl text-sm leading-loose text-white md:text-base">
             Exploring communication, AI, NLP, personal branding, workplace trends, and professional growth.
           </p>
@@ -85,7 +85,7 @@ function Blog() {
       </section>
 
       {/* Annahar News — below */}
-      <section className="border-t border-slate-100 bg-white px-8 py-16 md:px-12">
+      <section className="border-t border-slate-100 bg-[#F5F9FD] px-8 py-16 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 flex items-center gap-3">
             <span className="h-[7px] w-[7px] border border-navy bg-baby" />

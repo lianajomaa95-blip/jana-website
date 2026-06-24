@@ -37,10 +37,10 @@ function Services() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-[7px] w-[7px] bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-white">SERVICES</span>
+            <span className="text-xs tracking-[0.2em] text-baby">SERVICES</span>
           </div>
           <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">
-            What I offer
+            What I Offer
           </h1>
           <p className="mt-5 max-w-2xl text-sm leading-loose text-white md:text-base">
             Practical, research-based services that help individuals and

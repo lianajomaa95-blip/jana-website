@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import aboutPhoto from '../assets/jana-about.jpg'
 
 function About() {
@@ -17,16 +18,18 @@ function About() {
           </h2>
 
           <p className="max-w-2xl text-sm leading-loose text-navy md:text-base">
-            I help individuals and organizations to integrate AI tools successfully
-            in their work in the GCC. My work combines research, strategy, and
-            practical solutions to help people communicate more effectively, build
-            stronger professional identities, and boost their digital presence
-            through branding.
+            My journey began with a passion for language, communication, and
+            understanding how people create meaning. It evolved into research,
+            university teaching, consulting, and discovering the relationship
+            between communication and artificial intelligence.
           </p>
 
-          <a className="mt-6 inline-block cursor-pointer border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base">
+          <Link
+            to="/about"
+            className="mt-6 inline-block border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base"
+          >
             More about me →
-          </a>
+          </Link>
         </div>
 
         {/* RIGHT: photo */}

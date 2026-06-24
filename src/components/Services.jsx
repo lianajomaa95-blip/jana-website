@@ -11,21 +11,18 @@ function Services() {
   ]
 
   const [openIndex, setOpenIndex] = useState(null)
-
-  const toggle = (i) => {
-    setOpenIndex(openIndex === i ? null : i)
-  }
+  const toggle = (i) => setOpenIndex(openIndex === i ? null : i)
 
   return (
     <section className="border-b border-slate-100 bg-white px-8 py-16 md:px-12">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
 
         <div className="mb-8 flex items-center gap-3">
           <span className="h-[7px] w-[7px] border border-navy bg-baby" />
           <span className="text-xs tracking-[0.2em] text-navy">HOW I CAN HELP</span>
         </div>
 
-        <div className="divide-y divide-slate-200 border-y border-slate-200">
+        <div className="max-w-3xl divide-y divide-slate-200 border-y border-slate-200">
           {services.map((service, i) => {
             const isOpen = openIndex === i
             return (
