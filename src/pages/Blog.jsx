@@ -49,9 +49,9 @@ function Blog() {
             <img src={post.image} alt={post.title} loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-1 flex-col p-5" dir="auto">
-            <h3 className="text-sm font-semibold leading-snug text-navy group-hover:underline">{post.title}</h3>
-            <p className="mt-2 text-[11px] text-navy/45">{post.author}</p>
-            <span className="mt-auto pt-3 text-[11px] font-medium text-navy">Read article →</span>
+            <h3 className="text-sm font-semibold leading-snug text-navy group-hover:underline md:text-base">{post.title}</h3>
+            <p className="mt-2 text-[11px] text-navy md:text-xs">{post.author}</p>
+            <span className="mt-auto pt-3 text-[11px] font-medium text-navy md:text-xs">Read article →</span>
           </div>
         </a>
       ))}
@@ -63,33 +63,35 @@ function Blog() {
       <section className="bg-navy px-8 py-16 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 flex items-center gap-3">
-            <span className="h-1.75 w-1.75 bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-baby">BLOG &amp; INSIGHTS</span>
+            <span className="h-[7px] w-[7px] bg-baby" />
+            <span className="text-xs tracking-[0.2em] text-white">BLOG &amp; INSIGHTS</span>
           </div>
           <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">Content that Matters</h1>
-          <p className="mt-5 max-w-2xl text-sm leading-loose text-white/70">
+          <p className="mt-5 max-w-2xl text-sm leading-loose text-white md:text-base">
             Exploring communication, AI, NLP, personal branding, workplace trends, and professional growth.
           </p>
         </div>
       </section>
 
+      {/* Great Place To Work Middle East — on top */}
       <section className="bg-white px-8 py-16 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 flex items-center gap-3">
-            <span className="h-1.75 w-1.75 border border-navy bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-navy/60">PUBLISHED IN AN-NAHAR</span>
+            <span className="h-[7px] w-[7px] border border-navy bg-baby" />
+            <span className="text-xs tracking-[0.2em] text-navy">PUBLISHED IN GREAT PLACE TO WORK MIDDLE EAST</span>
           </div>
-          <CardGrid items={anahar} />
+          <CardGrid items={others} />
         </div>
       </section>
 
-      <section className="border-t border-slate-100 bg-[#F5F9FD] px-8 py-16 md:px-12">
+      {/* Annahar News — below */}
+      <section className="border-t border-slate-100 bg-white px-8 py-16 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="mb-8 flex items-center gap-3">
-            <span className="h-1.75 w-1.75 border border-navy bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-navy/60">PUBLISHED IN GREAT PLACE TO WORK</span>
+            <span className="h-[7px] w-[7px] border border-navy bg-baby" />
+            <span className="text-xs tracking-[0.2em] text-navy">ANNAHAR NEWS</span>
           </div>
-          <CardGrid items={others} />
+          <CardGrid items={anahar} />
         </div>
       </section>
     </div>

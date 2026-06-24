@@ -58,12 +58,12 @@ function Events() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-1.75 w-1.75 bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-baby">EVENTS</span>
+            <span className="text-xs tracking-[0.2em] text-white">EVENTS</span>
           </div>
           <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">
             Memorable Moments
           </h1>
-          <p className="mt-5 max-w-2xl text-sm leading-loose text-white/70">
+          <p className="mt-5 max-w-2xl text-sm leading-loose text-white">
             Highlights from conferences, workshops, speaking engagements, and
             professional events.
           </p>
@@ -122,7 +122,7 @@ function Events() {
             ))}
           </div>
 
-          <p className="mt-4 text-center text-xs text-navy/40">
+          <p className="mt-4 text-center text-xs text-navy">
             {index + 1} / {events.length}
           </p>
 

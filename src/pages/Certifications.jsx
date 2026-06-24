@@ -53,19 +53,19 @@ function Certifications() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-1.75 w-1.75 bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-baby">CERTIFICATIONS</span>
+            <span className="text-xs tracking-[0.2em] text-white">CERTIFICATIONS</span>
           </div>
           <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">
             Professional Development
           </h1>
-          <p className="mt-5 max-w-2xl text-sm leading-loose text-white/70">
+          <p className="mt-5 max-w-2xl text-sm leading-loose text-white">
             I believe that learning is a continuous journey! Here are highlights of
             professional certifications and specialized training completed in areas
             including:
           </p>
           <div className="mt-6 flex flex-wrap gap-2.5">
             {areas.map((area) => (
-              <span key={area} className="rounded border border-white/20 px-4 py-2 text-xs text-baby">
+              <span key={area} className="rounded border border-white/20 px-4 py-2 text-xs text-white">
                 {area}
               </span>
             ))}
@@ -80,7 +80,7 @@ function Certifications() {
           <div className="mb-8 text-center">
             <div className="mb-3 flex items-center justify-center gap-3">
               <span className="h-1.75 w-1.75 border border-navy bg-baby" />
-              <span className="text-xs tracking-[0.2em] text-navy/60">A SELECTION OF</span>
+              <span className="text-xs tracking-[0.2em] text-navy">A SELECTION OF</span>
             </div>
             <h2 className="font-serif text-2xl font-medium text-navy">
               Certificates &amp; Training
@@ -111,7 +111,7 @@ function Certifications() {
                 <h3 className="font-serif text-base font-medium text-navy">
                   {cert.title}
                 </h3>
-                <p className="mt-1 text-xs text-navy/50">
+                <p className="mt-1 text-xs text-navy">
                   {cert.issuer} · {cert.year}
                 </p>
               </div>
@@ -141,7 +141,7 @@ function Certifications() {
             ))}
           </div>
 
-          <p className="mt-4 text-center text-xs text-navy/40">
+          <p className="mt-4 text-center text-xs text-navy">
             {index + 1} / {certificates.length}
           </p>
 

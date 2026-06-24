@@ -31,12 +31,12 @@ function Publications() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-1.75 w-1.75 bg-baby" />
-            <span className="text-xs tracking-[0.2em] text-baby">PUBLICATIONS</span>
+            <span className="text-xs tracking-[0.2em] text-white">PUBLICATIONS</span>
           </div>
           <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">
             Research &amp; Publications
           </h1>
-          <p className="mt-5 max-w-2xl text-sm leading-loose text-white/70">
+          <p className="mt-5 max-w-2xl text-sm leading-loose text-white">
             A collection of my academic publications, conference papers, and
             research papers. Explore my full research record on the platforms below.
           </p>
@@ -67,7 +67,7 @@ function Publications() {
                   <h3 className="text-sm font-semibold text-navy group-hover:underline">
                     {p.name}
                   </h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-navy/50">
+                  <p className="mt-1.5 text-xs leading-relaxed text-navy">
                     {p.desc}
                   </p>
                   <span className="mt-3 inline-block text-[11px] font-medium text-navy">

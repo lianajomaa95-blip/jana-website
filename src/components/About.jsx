@@ -1,102 +1,48 @@
-import aboutPhoto from '../assets/jana-about.webp'
+import aboutPhoto from '../assets/jana-about.jpg'
 
 function About() {
-  const combines = ["Communication", "AI", "Natural Language Processing", "Applied Linguistics", "Research"]
-  const drives = [
-    "Communicate with confidence",
-    "Adapt to emerging technologies",
-    "Build meaningful professional identities",
-    "Turn knowledge into impact",
-    "Navigate change with clarity",
-  ]
-  const highlights = [
-    "PhD Researcher", "Communication Consultant", "NLP Specialist",
-    "Corporate Trainer", "Speaker", "Content Strategist",
-  ]
-
   return (
-    <div>
-      {/* page header — text + photo side by side */}
-      <section className="bg-white px-8 py-16 md:px-12">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 md:flex-row md:gap-16">
+    <section className="border-b border-slate-100 bg-white px-8 py-16 md:px-12">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 md:flex-row md:gap-16">
 
-          {/* LEFT: story text */}
-          <div className="flex-1">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="h-1.75 w-1.75 border border-navy bg-baby" />
-              <span className="text-xs tracking-[0.2em] text-navy/60">ABOUT</span>
-            </div>
-            <h1 className="font-serif text-3xl font-medium text-navy md:text-4xl">My Story</h1>
-            <p className="mt-5 text-sm leading-loose text-navy/70">
-              My journey began with a passion for language, communication, and
-              understanding how people create meaning. That passion evolved into
-              research, university teaching, consulting, and discovering the
-              relationship between communication and artificial intelligence.
-            </p>
+        {/* LEFT: text */}
+        <div className="flex-1">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-[7px] w-[7px] border border-navy bg-baby" />
+            <span className="text-xs tracking-[0.2em] text-navy">WELCOME</span>
           </div>
 
-          {/* RIGHT: photo with accent square */}
-          <div className="relative shrink-0">
-            <img
-              src={aboutPhoto}
-              alt="Jana Saab"
-              width="260"
-              height="340"
-              className="h-80 w-60 rounded-xl object-cover shadow-sm"
-            />
-            <div className="absolute -bottom-3 -right-3 -z-10 h-20 w-20 rounded-xl bg-baby" />
-          </div>
+          <h2 className="mb-4 font-serif text-2xl font-medium text-navy md:text-3xl">
+            Meet Jana!
+          </h2>
 
-        </div>
-      </section>
-
-      {/* my work combines */}
-      <section className="border-y border-slate-100 bg-[#F5F9FD] px-8 py-14 md:px-12">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-6 font-serif text-xl font-medium text-navy">My work combines</h2>
-          <div className="flex flex-wrap gap-2.5">
-            {combines.map((item) => (
-              <span key={item} className="rounded border border-[#BFD9F2] bg-white px-4 py-2 text-xs text-navy">
-                {item}
-              </span>
-            ))}
-          </div>
-          <p className="mt-8 max-w-2xl font-serif text-lg italic leading-relaxed text-navy">
-            My mission is to help people and organizations communicate more
-            effectively, think critically, and create meaningful impact.
+          <p className="max-w-2xl text-sm leading-loose text-navy md:text-base">
+            I help individuals and organizations to integrate AI tools successfully
+            in their work in the GCC. My work combines research, strategy, and
+            practical solutions to help people communicate more effectively, build
+            stronger professional identities, and boost their digital presence
+            through branding.
           </p>
-        </div>
-      </section>
 
-      {/* what drives me */}
-      <section className="bg-white px-8 py-14 md:px-12">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-6 font-serif text-xl font-medium text-navy">What Drives Me</h2>
-          <ul className="grid max-w-2xl gap-3 sm:grid-cols-2">
-            {drives.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-navy/70">
-                <span className="mt-0.5 font-semibold text-navy">✓</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+          <a className="mt-6 inline-block cursor-pointer border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base">
+            More about me →
+          </a>
         </div>
-      </section>
 
-      {/* professional highlights */}
-      <section className="border-t border-slate-100 bg-[#F5F9FD] px-8 py-14 md:px-12">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-6 font-serif text-xl font-medium text-navy">Professional Highlights</h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {highlights.map((role) => (
-              <div key={role} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-navy">
-                {role}
-              </div>
-            ))}
-          </div>
+        {/* RIGHT: photo */}
+        <div className="relative flex-shrink-0">
+          <img
+            src={aboutPhoto}
+            alt="Jana Saab"
+            width="240"
+            height="300"
+            className="h-72 w-56 rounded-xl object-cover shadow-sm"
+          />
+          <div className="absolute -bottom-3 -right-3 -z-10 h-16 w-16 rounded-xl bg-baby" />
         </div>
-      </section>
-    </div>
+
+      </div>
+    </section>
   )
 }
 

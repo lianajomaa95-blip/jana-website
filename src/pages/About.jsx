@@ -1,4 +1,4 @@
-import aboutPhoto from '../assets/jana-about.webp'
+import aboutPhoto from '../assets/jana-about.jpg'
 
 function About() {
   const combines = ["Communication", "AI", "Natural Language Processing", "Applied Linguistics", "Research"]
@@ -11,28 +11,28 @@ function About() {
   ]
   const highlights = [
     "PhD Researcher", "Communication Consultant", "NLP Specialist",
-    "Corporate Trainer", "Speaker", "Content Strategist",
+    "Corporate Trainer", "Conference & Keynote Speaker", "Content Strategist",
   ]
 
   return (
     <div>
-      {/* NAVY header band — story text + photo */}
+      {/* NAVY header — Welcome + photo */}
       <section className="bg-navy px-8 py-16 md:px-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 md:flex-row md:gap-16">
           <div className="flex-1">
             <div className="mb-4 flex items-center gap-3">
-              <span className="h-1.75 w-1.75 bg-baby" />
-              <span className="text-xs tracking-[0.2em] text-baby">ABOUT</span>
+              <span className="h-[7px] w-[7px] bg-baby" />
+              <span className="text-xs tracking-[0.2em] text-white">WELCOME</span>
             </div>
-            <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">My Story</h1>
-            <p className="mt-5 text-sm leading-loose text-white/70">
+            <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">Meet Jana!</h1>
+            <p className="mt-5 text-sm leading-loose text-white md:text-base">
               My journey began with a passion for language, communication, and
-              understanding how people create meaning. That passion evolved into
+              understanding how people create meaning. Then, it evolved into
               research, university teaching, consulting, and discovering the
               relationship between communication and artificial intelligence.
             </p>
           </div>
-          <div className="relative shrink-0">
+          <div className="relative flex-shrink-0">
             <img
               src={aboutPhoto}
               alt="Jana Saab"
@@ -48,43 +48,48 @@ function About() {
       {/* WHITE — my work combines */}
       <section className="border-b border-slate-100 bg-white px-8 py-14 md:px-12">
         <div className="mx-auto max-w-5xl">
-          <h2 className="mb-6 font-serif text-xl font-medium text-navy">My work combines</h2>
+          <h2 className="mb-6 font-serif text-xl font-medium text-navy md:text-2xl">My work combines</h2>
           <div className="flex flex-wrap gap-2.5">
             {combines.map((item) => (
-              <span key={item} className="rounded border border-[#BFD9F2] bg-white px-4 py-2 text-xs text-navy">
+              <span key={item} className="rounded border border-navy bg-white px-4 py-2 text-xs text-navy md:text-sm">
                 {item}
               </span>
             ))}
           </div>
-          <p className="mt-8 max-w-2xl font-serif text-lg italic leading-relaxed text-navy">
-            My mission is to help people and organizations communicate more
-            effectively, think critically, and create meaningful impact.
-          </p>
         </div>
       </section>
 
-      {/* WHITE — what drives me */}
-      <section className="bg-[#F5F9FD] px-8 py-14 md:px-12">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-6 font-serif text-xl font-medium text-navy">What Drives Me</h2>
-          <ul className="grid max-w-2xl gap-3 sm:grid-cols-2">
-            {drives.map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-navy/70">
-                <span className="mt-0.5 font-semibold text-navy">✓</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+    
+
+      {/* WHITE — mission & vision */}
+      <section className="bg-white px-8 py-14 md:px-12">
+        <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="mb-3 font-serif text-xl font-medium text-navy md:text-2xl">Mission</h2>
+            <p className="text-sm leading-loose text-navy md:text-base">
+              My mission is to help professionals and organizations communicate
+              effectively, integrate AI tools successfully, and transform research
+              into practical actions through strategic communication solutions.
+            </p>
+          </div>
+          <div>
+            <h2 className="mb-3 font-serif text-xl font-medium text-navy md:text-2xl">Vision</h2>
+            <p className="text-sm leading-loose text-navy md:text-base">
+              I aim at creating real impact through offering strong communication,
+              embracing digital workplace transformation, and driving change with
+              clarity and purpose.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* WHITE — professional highlights */}
-      <section className="border-t border-slate-100 bg-white px-8 py-14 md:px-12">
+      <section className="border-t border-slate-100 bg-[#F5F9FD] px-8 py-14 md:px-12">
         <div className="mx-auto max-w-5xl">
-          <h2 className="mb-6 font-serif text-xl font-medium text-navy">Professional Highlights</h2>
+          <h2 className="mb-6 font-serif text-xl font-medium text-navy md:text-2xl">Professional Highlights</h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {highlights.map((role) => (
-              <div key={role} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-navy">
+              <div key={role} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-navy md:text-base">
                 {role}
               </div>
             ))}

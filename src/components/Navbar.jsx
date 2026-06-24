@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+  const location = useLocation()
 
   const links = [
     { name: "Home", path: "/" },
@@ -19,29 +20,38 @@ function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-8 py-4 md:px-12">
 
-        {/* logo */}
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <span className="flex h-8 w-8 items-center justify-center rounded-md bg-navy text-xs font-semibold tracking-wide text-white">
             JS
           </span>
-          <span className="text-sm font-semibold text-navy">Jana Saab</span>
+          <span className="text-base font-semibold text-navy">Jana Saab</span>
         </Link>
 
         {/* desktop links */}
-        <div className="hidden items-center gap-4 lg:flex">
-          <ul className="flex items-center gap-5 text-[11px] text-navy/60">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link to={link.path} className="hover:text-navy">{link.name}</Link>
-              </li>
-            ))}
+        <div className="hidden items-center gap-5 lg:flex">
+          <ul className="flex items-center gap-6 text-sm text-navy">
+            {links.map((link) => {
+              const active = location.pathname === link.path
+              return (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className={`border-b-2 pb-1 transition ${
+                      active ? "border-navy font-medium" : "border-transparent hover:border-navy/30"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
-          <Link to="/contact" className="rounded-md bg-navy px-4 py-2 text-[11px] font-medium text-white">
+          <Link to="/contact" className="rounded-md bg-navy px-4 py-2 text-sm font-medium text-white">
             Contact
           </Link>
         </div>
 
-        {/* mobile hamburger button */}
+        {/* mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
           aria-label="Menu"
@@ -54,21 +64,24 @@ function Navbar() {
 
       </nav>
 
-      {/* mobile dropdown menu */}
+      {/* mobile dropdown */}
       {open && (
         <div className="border-t border-slate-100 bg-white lg:hidden">
           <ul className="flex flex-col px-8 py-4">
-            {links.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.path}
-                  onClick={() => setOpen(false)}
-                  className="block py-2.5 text-sm text-navy/70 hover:text-navy"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+            {links.map((link) => {
+              const active = location.pathname === link.path
+              return (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    onClick={() => setOpen(false)}
+                    className={`block py-2.5 text-sm text-navy ${active ? "font-semibold" : ""}`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              )
+            })}
             <li>
               <Link
                 to="/contact"

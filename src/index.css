@@ -12,3 +12,10 @@ body {
   font-family: var(--font-sans);
   color: var(--color-navy);
 }
+
+/* Bigger base text on desktop only (mobile stays the same) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.0625rem;
+  }
+}
