@@ -43,7 +43,7 @@ function Services() {
             What I Offer
           </h1>
           <p className="mt-5 max-w-2xl text-sm leading-loose text-white md:text-base">
-            Practical, research-based services that help individuals and
+            Practical &amp; research-based services that help individuals and
             organizations communicate with clarity and confidence in the age of AI.
           </p>
         </div>
