@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroPhoto from '../assets/janaheroimage.png'
+import heroPhoto from '../assets/janaaboutimage.png'
 
 function Hero() {
   return (

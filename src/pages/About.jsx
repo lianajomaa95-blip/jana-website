@@ -1,4 +1,4 @@
-import aboutPhoto from '../assets/jana.webp'
+import aboutPhoto from '../assets/janaheroimage.png'
 
 function About() {
   const combines = ["Communication", "AI", "Natural Language Processing", "Applied Linguistics", "Research"]

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import teaserPhoto from '../assets/janaaboutimage.png'
+import teaserPhoto from '../assets/janaheroimage.png'
 
 function About() {
   return (
