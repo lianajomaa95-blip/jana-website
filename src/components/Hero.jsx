@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
-import janaPhoto from '../assets/jana.webp'
+import heroPhoto from '../assets/janaheroimage.png'
 
 function Hero() {
   return (
     <section className="bg-white px-8 py-16 md:px-12">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 md:flex-row md:gap-14">
 
-        {/* LEFT: text */}
         <div className="flex-1">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-0.5 w-6 bg-navy" />
@@ -32,31 +31,22 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex items-center gap-4">
-            <Link
-              to="/contact"
-              className="rounded-md bg-navy px-6 py-3 text-sm font-medium text-white md:text-base"
-            >
+            <Link to="/contact" className="rounded-md bg-navy px-6 py-3 text-sm font-medium text-white md:text-base">
               Get in touch
             </Link>
-            <Link
-              to="/services"
-              className="border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base"
-            >
+            <Link to="/services" className="border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base">
               Explore services →
             </Link>
           </div>
         </div>
 
-        {/* RIGHT: photo */}
-        <div className="relative flex-shrink-0">
+        {/* photo on light grey box */}
+        <div className="flex h-72 w-60 flex-shrink-0 items-end justify-center overflow-hidden rounded-xl bg-slate-100">
           <img
-            src={janaPhoto}
+            src={heroPhoto}
             alt="Jana Saab"
-            width="176"
-            height="208"
-            className="h-52 w-44 rounded-xl object-cover shadow-sm"
+            className="h-full w-full object-contain"
           />
-          <div className="absolute -bottom-3 -right-3 -z-10 h-16 w-16 rounded-xl bg-baby" />
         </div>
 
       </div>

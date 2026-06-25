@@ -1,14 +1,7 @@
-import aboutPhoto from '../assets/jana-about.jpg'
+import aboutPhoto from '../assets/jana.webp'
 
 function About() {
   const combines = ["Communication", "AI", "Natural Language Processing", "Applied Linguistics", "Research"]
-  const drives = [
-    "Communicate with confidence",
-    "Adapt to emerging technologies",
-    "Build meaningful professional identities",
-    "Turn knowledge into impact",
-    "Navigate change with clarity",
-  ]
   const highlights = [
     "PhD Researcher", "Communication Consultant", "NLP Specialist",
     "Corporate Trainer", "Conference & Keynote Speaker", "Content Strategist",
@@ -21,8 +14,8 @@ function About() {
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 md:flex-row md:gap-16">
           <div className="flex-1">
             <div className="mb-4 flex items-center gap-3">
-              <span className="h-[7px] w-[7px] bg-baby" />
-              <span className="text-xs tracking-[0.2em] text-white">WELCOME</span>
+              <span className="h-1.75 w-1.75 bg-baby" />
+              <span className="text-xs tracking-[0.2em] text-baby">WELCOME</span>
             </div>
             <h1 className="font-serif text-3xl font-medium text-white md:text-4xl">Meet Jana!</h1>
             <p className="mt-5 text-sm leading-loose text-white md:text-base">
@@ -32,15 +25,14 @@ function About() {
               relationship between communication and artificial intelligence.
             </p>
           </div>
-          <div className="relative flex-shrink-0">
+
+          {/* photo on grey background */}
+          <div className="h-80 w-64 shrink-0 overflow-hidden rounded-xl bg-slate-100">
             <img
               src={aboutPhoto}
               alt="Jana Saab"
-              width="260"
-              height="340"
-              className="h-80 w-60 rounded-xl object-cover shadow-lg"
+              className="h-full w-full object-cover"
             />
-            <div className="absolute -bottom-3 -right-3 -z-10 h-20 w-20 rounded-xl bg-baby" />
           </div>
         </div>
       </section>
@@ -59,10 +51,8 @@ function About() {
         </div>
       </section>
 
-    
-
       {/* WHITE — mission & vision */}
-      <section className="bg-white px-8 py-14 md:px-12">
+      <section className="bg-[#F5F9FD] px-8 py-14 md:px-12">
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
           <div>
             <h2 className="mb-3 font-serif text-xl font-medium text-navy md:text-2xl">Mission</h2>
@@ -84,7 +74,7 @@ function About() {
       </section>
 
       {/* WHITE — professional highlights */}
-      <section className="border-t border-slate-100 bg-[#F5F9FD] px-8 py-14 md:px-12">
+      <section className="border-t border-slate-100 bg-white px-8 py-14 md:px-12">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-6 font-serif text-xl font-medium text-navy md:text-2xl">Professional Highlights</h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

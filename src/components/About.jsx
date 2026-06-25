@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
-import aboutPhoto from '../assets/jana-about.jpg'
+import teaserPhoto from '../assets/janaaboutimage.png'
 
 function About() {
   return (
     <section className="border-b border-slate-100 bg-white px-8 py-16 md:px-12">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 md:flex-row md:gap-16">
 
-        {/* LEFT: text */}
         <div className="flex-1">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-[7px] w-[7px] border border-navy bg-baby" />
@@ -24,24 +23,18 @@ function About() {
             between communication and artificial intelligence.
           </p>
 
-          <Link
-            to="/about"
-            className="mt-6 inline-block border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base"
-          >
+          <Link to="/about" className="mt-6 inline-block border-b border-navy pb-0.5 text-sm font-medium text-navy md:text-base">
             More about me →
           </Link>
         </div>
 
-        {/* RIGHT: photo */}
-        <div className="relative flex-shrink-0">
+        {/* photo on light grey box */}
+        <div className="flex h-72 w-60 flex-shrink-0 items-end justify-center overflow-hidden rounded-xl bg-slate-100">
           <img
-            src={aboutPhoto}
+            src={teaserPhoto}
             alt="Jana Saab"
-            width="240"
-            height="300"
-            className="h-72 w-56 rounded-xl object-cover shadow-sm"
+            className="h-full w-full object-contain"
           />
-          <div className="absolute -bottom-3 -right-3 -z-10 h-16 w-16 rounded-xl bg-baby" />
         </div>
 
       </div>
